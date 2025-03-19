@@ -10,7 +10,10 @@ app.use(express.json());
 app.use('/', invertRouter)
 
 
-app.listen(port, () => {
-    console.log(`Server listening at http://localhost:${port}`);
-})
+const run = async () => {
 
+    app.listen(port, () => {
+        console.log(`Server started on http://localhost:${port}`);
+    })
+}
+run().catch(console.error);
