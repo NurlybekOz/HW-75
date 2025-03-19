@@ -9,3 +9,8 @@ app.use(cors());
 app.use(express.json());
 app.use('/', invertRouter)
 
+
+app.listen(port, () => {
+    console.log(`Server listening at http://localhost:${port}`);
+})
+
